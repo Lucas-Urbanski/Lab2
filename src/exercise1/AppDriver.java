@@ -1,6 +1,7 @@
 package exercise1;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class AppDriver
 {
@@ -20,8 +21,19 @@ public class AppDriver
 		studs.add( new Student( "Anderson", 34 ) );
 		studs.add( new Student( "Moore", 33 ) );
 
+		// Unsorted list
+		System.out.println("\nUnsorted List:");
 		System.out.println( studs );
-
+		
+		// Sort by name
+		Collections.sort( studs );
+		System.out.println("\nSorted by Name:");
+		System.out.println( studs );
+		
+		// Sort by age
+		Collections.sort( studs, new StudentComparator() );
+		System.out.println("\nSorted by Age:");
+		System.out.println( studs );
 	}
 
 }

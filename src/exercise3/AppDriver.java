@@ -1,5 +1,4 @@
 package exercise3;
-
 import java.util.Random;
 
 public class AppDriver
@@ -18,6 +17,13 @@ public class AppDriver
 		{
 			nums[i] = rand.nextInt( UPPER_BOUND );
 			System.out.println( nums[i] );
+		}
+		
+		SelectionSort.sort(nums);
+		System.out.println("Sorted Array:");
+		
+		for (int n : nums) {
+			System.out.print(n + " ");
 		}
 
 	}
